@@ -16,7 +16,7 @@ Apigee with its rich ecosystem of policies can enable flows that allow verificat
 
 This is the source code for the Proxy, policies and callouts required for this setup
 
-The Java Callout policy is borrowed from a great set of code libraries made available by Dino Chiesa at https://github.com/apigee/iloveapis2015-jwt-jwe-jws/tree/master/jwt_signed
+The Java Callout policy is borrowed from a great set of code libraries made available by @DinoChiesa at https://github.com/apigee/iloveapis2015-jwt-jwe-jws/tree/master/jwt_signed
 
 ## Setup to test this:
 1.	Signup at auth0.com for an account/tenant
@@ -44,7 +44,7 @@ curl -X GET -H "Authorization: Bearer <access_token>" -H "Cache-Control: no-cach
 Before you do that though you have to have the correct setup within the Proxy to be able to validate the token presented in the Authorization header. Lets talk a little bit about that below
 
 ## API Proxy Configuration
-The API proxy needs to know how to validate/verify the access_token that is attached to the Authorization header. The Java Callout Policy in the attached proxy has configuration to allow for this. ( Thanks Dino Chiesa).
+The API proxy needs to know how to validate/verify the access_token that is attached to the Authorization header. The Java Callout Policy in the attached proxy has configuration to allow for this. ( Thanks @DinoChiesa!).
 The information you will need for the Java Callout are in bold below
 ```xml
 <JavaCallout name="JWT-Parse-OpenIDConnect">
