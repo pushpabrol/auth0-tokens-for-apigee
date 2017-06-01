@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<JavaCallout name="JWT-Parse-OpenIDConnect">
+    <Properties>
+        <Property name="algorithm">RS256</Property>
+        <Property name="jwt">{clientrequest.oauthtoken}</Property>
+        <!-- public-key used only for algorithm = RS256 -->
+        <Property name="public-key">
+    -----BEGIN PUBLIC KEY-----
+    ...
+    -----END PUBLIC KEY-----    
+        </Property>
+        <Property name="iss">https://tenant.auth0.com</Property>
+        <Property name="aud">auth0_api_audience</Property>
+    </Properties>
+    <ClassName>com.apigee.callout.jwtsigned.JwtParserCallout</ClassName>
+    <ResourceURL>java://apigee-edge-callout-jwt-signed-1.0.6.jar</ResourceURL>
+</JavaCallout>

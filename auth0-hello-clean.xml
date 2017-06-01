@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="auth0-hello-clean">
+    <Basepaths>/helloworld</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1496332859310</CreatedAt>
+    <CreatedBy>pushp.abrol@gmail.com</CreatedBy>
+    <Description>hello world proxy</Description>
+    <DisplayName>helloworld</DisplayName>
+    <LastModifiedAt>1496333060158</LastModifiedAt>
+    <LastModifiedBy>pushp.abrol@gmail.com</LastModifiedBy>
+    <Policies>
+        <Policy>Add-Headers-extracted-from-JWT</Policy>
+        <Policy>ExtractVariable-OauthToken</Policy>
+        <Policy>JWT-Parse-OpenIDConnect</Policy>
+        <Policy>Raise-Authentication-Exception</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>java://apigee-edge-callout-jwt-signed-1.0.6.jar</Resource>
+        <Resource>java://apigee-edge-callout-jwt-signed-1.0.8.jar</Resource>
+        <Resource>java://commons-lang3-3.4.jar</Resource>
+        <Resource>java://guava-18.0.jar</Resource>
+        <Resource>java://json-smart-1.3.jar</Resource>
+        <Resource>java://nimbus-jose-jwt-3.10.jar</Resource>
+        <Resource>java://not-yet-commons-ssl-0.3.11.jar</Resource>
+        <Resource>jsc://jwtDecode.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

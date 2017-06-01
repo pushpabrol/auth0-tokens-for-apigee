@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="Add-Headers-extracted-from-JWT">
+    <DisplayName>Add Headers extracted from JWT</DisplayName>
+    <AssignTo createNew="false" transport="http" type="request">request</AssignTo>
+    <Set>
+        <Headers>
+            <Header name="user">{jwt_claims}</Header>
+        </Headers>
+    </Set>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+</AssignMessage>
