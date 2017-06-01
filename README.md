@@ -1,3 +1,4 @@
+# Using Auth0 tokens to access Apigee protected resources
 
 
 Apigee with its rich ecosystem of policies can enable flows that allow verification of external access tokens for APIs protected under Apigee. The flow itself is pretty simple and straight forward and is explained below:
